@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Коммерческое предложение для школ, клубов и коллективов — специальные условия на коллективные заказы спортивной экипировки SOLO.">
+  <title>Коллективные заказы — коммерческое предложение | SOLO</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="https://solorussia.com/" class="logo" target="_blank" rel="noopener">
+        <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#benefits">Преимущества</a>
+        <a href="#steps">Как заказать</a>
+        <a href="#products">Каталог</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+79267001814" class="header__phone">+7 926 700 1814</a>
+        <button class="btn btn--outline-red btn--sm" data-modal="callback">Заказать звонок</button>
+      </div>
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" hidden>
+      <nav>
+        <a href="#benefits">Преимущества</a>
+        <a href="#steps">Как заказать</a>
+        <a href="#products">Каталог</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+        <a href="tel:+79267001814">+7 926 700 1814</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__intro">
+          <p class="hero__badge">Коммерческое предложение · SOLO</p>
+          <h1 class="title hero__title">Сотрудничество с&nbsp;командами, школами и&nbsp;коллективами</h1>
+          <p class="hero__lead">
+            Индивидуальные условия на&nbsp;коллективные заказы экипировки для школ, клубов,
+            спортивных секций и&nbsp;танцевальных классов.
+          </p>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__visual">
+            <picture>
+              <source srcset="https://solorussia.com/image/cache/catalog/Banner/202.500x600-@2x.webp" type="image/webp">
+              <img src="images/collectives.webp" alt="Коллективная экипировка SOLO">
+            </picture>
+            <div class="hero__visual-caption">
+              <span>Художественная гимнастика</span>
+              <span>Хореография и танцы</span>
+            </div>
+          </div>
+
+          <aside class="hero__panel">
+            <p class="hero__panel-label">Ключевые условия</p>
+            <ul class="hero__list">
+              <li>Скидка <strong>от 3%</strong> при заказе от&nbsp;10&nbsp;000&nbsp;₽</li>
+              <li>Коллективный заказ — <strong>от 5&nbsp;шт.</strong> одного артикула</li>
+              <li><strong>Бесплатная доставка</strong> по&nbsp;всей России</li>
+              <li>Дозаказ с&nbsp;сохранением условий коллектива</li>
+            </ul>
+
+            <div class="hero__cta">
+              <a href="#contact" class="btn btn--red">Получить консультацию</a>
+              <a href="#steps" class="btn btn--outline-red">Как сделать заказ</a>
+            </div>
+
+            <div class="hero__metrics">
+              <div class="hero__metric">
+                <strong>от 3%</strong>
+                <span>скидка</span>
+              </div>
+              <div class="hero__metric">
+                <strong>10 000 ₽</strong>
+                <span>мин. сумма</span>
+              </div>
+              <div class="hero__metric">
+                <strong>0 ₽</strong>
+                <span>доставка</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust reveal">
+      <div class="container trust__grid">
+        <article class="trust__item">
+          <div class="trust__icon">1992</div>
+          <h3>С&nbsp;1992 года</h3>
+          <p>Создаём экипировку для гимнастики и&nbsp;хореографии на&nbsp;собственной фабрике в&nbsp;Подмосковье.</p>
+        </article>
+        <article class="trust__item">
+          <div class="trust__icon">★</div>
+          <h3>Команда профессионалов</h3>
+          <p>Технологи, конструкторы и&nbsp;дизайнеры знают всё о&nbsp;комфорте и&nbsp;посадке формы.</p>
+        </article>
+        <article class="trust__item">
+          <div class="trust__icon">↗</div>
+          <h3>Полный сервис</h3>
+          <p>Консультация, помощь с&nbsp;выбором и&nbsp;доставка по&nbsp;России и&nbsp;за&nbsp;её&nbsp;пределы.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer" id="offer">
+      <div class="container">
+        <div class="offer__card">
+          <div class="offer__content">
+            <h2 class="title">Условия для коллективов</h2>
+            <ul class="offer__list">
+              <li>Автоматическая скидка <strong>от 3%</strong> при заказе от&nbsp;5&nbsp;шт. каждого артикула на&nbsp;сумму от&nbsp;10&nbsp;000&nbsp;₽</li>
+              <li>Размер скидки растёт пропорционально сумме заказа</li>
+              <li>Бесплатная доставка по&nbsp;всей России</li>
+              <li>Обратная доставка при обмене — за&nbsp;наш счёт</li>
+              <li>Дозаказ с&nbsp;сохранением условий коллективного заказа</li>
+            </ul>
+          </div>
+          <div class="offer__aside">
+            <p class="offer__price-label">Минимальный порог</p>
+            <p class="offer__price">10 000 ₽</p>
+            <p class="offer__note">+ от 5 единиц одного артикула</p>
+            <a href="#contact" class="btn btn--red btn--block">Запросить расчёт</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Преимущества</span>
+          <h2 class="title">Наши решения</h2>
+          <p>Всё, что нужно команде для удобной и&nbsp;выгодной закупки формы</p>
+        </div>
+        <div class="benefits__grid">
+          <article class="benefit-card">
+            <span class="benefit-card__num">01</span>
+            <h3>Постоянное наличие на&nbsp;складе</h3>
+            <p>Поддерживаем доступность всех моделей и&nbsp;размеров, чтобы команда была экипирована полностью.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__num">02</span>
+            <h3>Удобный подбор размера</h3>
+            <p>Подсказки в&nbsp;карточках товара и&nbsp;персональный консультант помогут подобрать точный размер.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__num">03</span>
+            <h3>Быстрая отгрузка</h3>
+            <p>После оплаты собираем и&nbsp;отправляем заказ в&nbsp;течение рабочего дня — независимо от&nbsp;объёма.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__num">04</span>
+            <h3>Простой обмен</h3>
+            <p>Если что-то не&nbsp;подошло — обменяем. Не&nbsp;распространяется на&nbsp;товары с&nbsp;кастомизацией.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__num">05</span>
+            <h3>Бесплатная доставка</h3>
+            <p>Коллективные заказы по&nbsp;России — бесплатно. Обратная доставка при обмене тоже за&nbsp;наш счёт.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__num">06</span>
+            <h3>Дозаказ по&nbsp;потребности</h3>
+            <p>Докупите недостающие артикулы с&nbsp;сохранением всех преимуществ крупного заказа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="steps">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Инструкция</span>
+          <h2 class="title">Как оформить коллективный заказ</h2>
+          <p>Пять простых шагов от&nbsp;регистрации до&nbsp;получения формы</p>
+        </div>
+        <div class="steps__layout">
+          <div class="steps__nav" role="tablist">
+            <button class="steps__tab active" data-step="0" data-step-label="Шаг" role="tab" aria-selected="true">1</button>
+            <button class="steps__tab" data-step="1" data-step-label="Шаг" role="tab" aria-selected="false">2</button>
+            <button class="steps__tab" data-step="2" data-step-label="Шаг" role="tab" aria-selected="false">3</button>
+            <button class="steps__tab" data-step="3" data-step-label="Шаг" role="tab" aria-selected="false">4</button>
+            <button class="steps__tab" data-step="4" data-step-label="Шаг" role="tab" aria-selected="false">5</button>
+          </div>
+          <div class="steps__panels">
+            <article class="steps__panel active" data-panel="0">
+              <h3>Создайте коллективный аккаунт</h3>
+              <p>Для зарегистрированных клиентов в&nbsp;личном кабинете действует автоматическая скидка от&nbsp;3% при заказе от&nbsp;5&nbsp;шт. каждого артикула на&nbsp;общую сумму от&nbsp;10&nbsp;000&nbsp;₽. Размер скидки увеличивается в&nbsp;зависимости от&nbsp;суммы в&nbsp;корзине.</p>
+            </article>
+            <article class="steps__panel" data-panel="1">
+              <h3>Соберите заказ на&nbsp;всю команду</h3>
+              <p>Добавьте нужные товары в&nbsp;корзину. Чтобы сэкономить время, используйте кнопку «Коллективный заказ» — она позволяет быстро добавить много позиций и&nbsp;размеров.</p>
+            </article>
+            <article class="steps__panel" data-panel="2">
+              <h3>Выбор размера</h3>
+              <p>Форма разработана с&nbsp;учётом анатомии спортсменов и&nbsp;может маломерить по&nbsp;сравнению с&nbsp;повседневной одеждой. Сверьте мерки с&nbsp;размерной таблицей — это гарантирует идеальную посадку.</p>
+            </article>
+            <article class="steps__panel" data-panel="3">
+              <h3>Проверьте корзину</h3>
+              <p>Перед оплатой убедитесь, что все модели и&nbsp;размеры верны. Итоговая сумма уже рассчитана с&nbsp;вашей персональной скидкой.</p>
+            </article>
+            <article class="steps__panel" data-panel="4">
+              <h3>Завершите оформление</h3>
+              <p>Укажите адрес доставки и&nbsp;нажмите «Оформить заказ». Затем оплатите онлайн для быстрой отгрузки или запросите звонок менеджера для консультации.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Каталог</span>
+          <h2 class="title">Популярные товары для коллективного заказа</h2>
+          <p>Базовые позиции, которые чаще всего заказывают команды</p>
+        </div>
+        <div class="products__grid">
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--1"></div>
+            <p class="product-card__sku">FD400-107</p>
+            <h3>Майка-полуборцовка из хлопка, чёрная</h3>
+            <p class="product-card__price">640 ₽</p>
+            <p class="product-card__sizes">Размеры: 28–48</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--2"></div>
+            <p class="product-card__sku">FD650-107</p>
+            <h3>Футболка из хлопка с коротким рукавом, чёрная</h3>
+            <p class="product-card__price">880 ₽</p>
+            <p class="product-card__sizes">Размеры: 26–50</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__image product-card__image--3"></div>
+            <p class="product-card__sku">RG606.0</p>
+            <h3>Футболка облегающая «Импульс»</h3>
+            <p class="product-card__price">1 400 ₽</p>
+            <p class="product-card__sizes">Размеры: 28–46</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--4"></div>
+            <p class="product-card__sku">RG655-107</p>
+            <h3>Лонгслив из хлопка</h3>
+            <p class="product-card__price">1 140 ₽</p>
+            <p class="product-card__sizes">Размеры: 28–48</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--5"></div>
+            <p class="product-card__sku">FD700-107</p>
+            <h3>Легинсы по щиколотку из хлопка, чёрные</h3>
+            <p class="product-card__price">920 ₽</p>
+            <p class="product-card__sizes">Размеры: 26–50</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--6"></div>
+            <p class="product-card__sku">FD702-107</p>
+            <h3>Легинсы с вырезом под пятку</h3>
+            <p class="product-card__price">1 020 ₽</p>
+            <p class="product-card__sizes">Размеры: 26–50</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--7"></div>
+            <p class="product-card__sku">FD760-107</p>
+            <h3>Шорты короткие из хлопка</h3>
+            <p class="product-card__price">680 ₽</p>
+            <p class="product-card__sizes">Размеры: 26–50</p>
+          </article>
+          <article class="product-card">
+            <div class="product-card__badge">Лидер</div>
+            <div class="product-card__image product-card__image--8"></div>
+            <p class="product-card__sku">RG767-107</p>
+            <h3>Шорты двойные с подшортниками</h3>
+            <p class="product-card__price">1 380 ₽</p>
+            <p class="product-card__sizes">Размеры: 28–46</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 class="title">Вопрос — ответ</h2>
+          <p>Ответы на&nbsp;частые вопросы о&nbsp;коллективных заказах</p>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Как подобрать размер?</summary>
+            <p>Пользуйтесь подсказками в&nbsp;карточках товара и&nbsp;таблицей размеров. Модели SOLO разработаны для спортсменов — учитывайте все показатели, а&nbsp;не&nbsp;только рост или обхват груди. При сомнениях обратитесь к&nbsp;консультанту.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Какой заказ считается коллективным?</summary>
+            <p>Единовременная покупка от&nbsp;5&nbsp;единиц одного артикула. Для команд, школ и&nbsp;секций — скидка от&nbsp;3% при сумме заказа от&nbsp;10&nbsp;000&nbsp;₽, размер скидки растёт пропорционально сумме.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Как получить скидку?</summary>
+            <p>Зарегистрируйте коллективный аккаунт и&nbsp;оформляйте заказ через него — скидка применится автоматически.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Какой срок отгрузки для объёмного заказа?</summary>
+            <p>Если все товары в&nbsp;наличии и&nbsp;заказ сделан до&nbsp;обеда — отгрузка в&nbsp;день формирования. После обеда — на&nbsp;следующий день.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно ли дозаказать позиции позже?</summary>
+            <p>Да. Оформите основной заказ, а&nbsp;затем дозакажите недостающие размеры тех&nbsp;же артикулов в&nbsp;любом количестве с&nbsp;сохранением условий коллективного заказа.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Есть ли обмен, если форма не подошла?</summary>
+            <p>Да, в&nbsp;течение 7&nbsp;календарных дней при сохранении товарного вида, упаковки и&nbsp;ярлыков. Доставку при обмене оплачиваем мы.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно ли сделать свой дизайн для команды?</summary>
+            <p>Нанесение вышивки доступно в&nbsp;коллекции «Триумф». Выберите «Нанесение» в&nbsp;карточке товара.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько стоит доставка?</summary>
+            <p>Доставка коллективных заказов по&nbsp;России — бесплатно. Обратная доставка при обмене или примерке — тоже за&nbsp;наш счёт.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="section-tag">Контакты</span>
+          <h2 class="title">Задать вопрос</h2>
+          <p>Заполните форму — менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время и&nbsp;подготовит персональное коммерческое предложение.</p>
+          <ul class="contact__details">
+            <li>
+              <span>Телефон</span>
+              <a href="tel:+79267001814">+7 926 700 1814</a>
+            </li>
+            <li>
+              <span>E-mail</span>
+              <a href="mailto:store@swimsolo.ru">store@swimsolo.ru</a>
+            </li>
+            <li>
+              <span>Адрес</span>
+              <p>141800, Московская обл., г.&nbsp;Дмитров,<br>ул.&nbsp;Бирлово поле, д.&nbsp;14</p>
+            </li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <fieldset>
+            <legend>Информация о школе / группе / коллективе</legend>
+            <label>
+              Название школы / группы / коллектива *
+              <input type="text" name="organization" required>
+            </label>
+            <label>
+              Направление деятельности *
+              <input type="text" name="direction" required>
+            </label>
+            <label>
+              Адрес *
+              <input type="text" name="address" required>
+            </label>
+            <label>
+              Сайт / социальные сети *
+              <input type="text" name="website" required>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Информация о представителе</legend>
+            <label>
+              ФИО *
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              Должность *
+              <input type="text" name="position" required>
+            </label>
+            <label>
+              Номер телефона *
+              <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
+            </label>
+            <label>
+              E-mail *
+              <input type="email" name="email" required>
+            </label>
+          </fieldset>
+          <label>
+            Напишите свой вопрос *
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required>
+            <span>Я согласен на обработку персональных данных и подтверждаю, что ознакомлен с условиями публичной оферты и политикой конфиденциальности</span>
+          </label>
+          <button type="submit" class="btn btn--red btn--block">Отправить заявку</button>
+          <p class="form-success" hidden>Спасибо! Заявка отправлена. Менеджер свяжется с вами в ближайшее время.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo logo--footer">
+          <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
+        </span>
+        <p>Экипировка для художественной гимнастики и&nbsp;хореографии</p>
+      </div>
+      <div class="footer__links">
+        <a href="#benefits">Преимущества</a>
+        <a href="#steps">Как заказать</a>
+        <a href="#products">Каталог</a>
+        <a href="#faq">Вопросы</a>
+      </div>
+      <p class="footer__copy">© 2026 ООО «Мануфактура Малюгина» — торговая марка Solo</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="callbackModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Закрыть">&times;</button>
+      <h3 id="modalTitle">Заказать обратный звонок</h3>
+      <form class="callback-form" id="callbackForm">
+        <label>
+          ФИО *
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Номер телефона *
+          <input type="tel" name="phone" required>
+        </label>
+        <label>
+          Комментарий
+          <textarea name="comment" rows="3"></textarea>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required>
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+        <button type="submit" class="btn btn--red btn--block">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
