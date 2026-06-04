@@ -1066,6 +1066,13 @@ textarea:focus {
   line-height: 150%;
 }
 
+.form-error {
+  margin: 12px 0 0;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .form-success {
   margin: 0;
   padding: 12px;

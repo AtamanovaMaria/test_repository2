@@ -60,16 +60,66 @@ function closeModal() {
 modalTriggers.forEach((trigger) => trigger.addEventListener("click", openModal));
 modalCloseElements.forEach((el) => el.addEventListener("click", closeModal));
 
-function handleFormSubmit(form, successSelector) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const success = form.querySelector(successSelector);
-    if (success) {
-      success.hidden = false;
+function getFormPayload(form) {
+  const data = {};
+  new FormData(form).forEach((value, key) => {
+    if (key !== "consent") {
+      data[key] = String(value).trim();
     }
-    form.reset();
-    if (form.id === "callbackForm") {
-      setTimeout(closeModal, 1500);
+  });
+  return data;
+}
+
+async function sendToGoogleSheets(formType, data) {
+  const url = window.GOOGLE_SHEETS_URL;
+  if (!url) {
+    return { ok: true, skipped: true };
+  }
+
+  const body = new URLSearchParams({
+    formType,
+    sentAt: new Date().toISOString(),
+    ...data,
+  });
+
+  await fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    body,
+  });
+
+  return { ok: true };
+}
+
+function handleFormSubmit(form, successSelector, formType) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitBtn = form.querySelector('[type="submit"]');
+    const success = form.querySelector(successSelector);
+    const error = form.querySelector(".form-error");
+
+    if (success) success.hidden = true;
+    if (error) error.hidden = true;
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      await sendToGoogleSheets(formType, getFormPayload(form));
+
+      if (success) success.hidden = false;
+      form.reset();
+
+      if (form.id === "callbackForm") {
+        setTimeout(closeModal, 1500);
+      }
+    } catch (err) {
+      if (error) {
+        error.hidden = false;
+        error.textContent =
+          "Не удалось отправить заявку. Попробуйте позже или позвоните нам.";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 }
@@ -77,8 +127,8 @@ function handleFormSubmit(form, successSelector) {
 const contactForm = document.getElementById("contactForm");
 const callbackForm = document.getElementById("callbackForm");
 
-if (contactForm) handleFormSubmit(contactForm, ".form-success");
-if (callbackForm) handleFormSubmit(callbackForm, ".form-success");
+if (contactForm) handleFormSubmit(contactForm, ".form-success", "contact");
+if (callbackForm) handleFormSubmit(callbackForm, ".form-success", "callback");
 
 const revealElements = document.querySelectorAll(".reveal");
 

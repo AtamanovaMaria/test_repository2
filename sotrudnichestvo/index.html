@@ -3,118 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Программа сотрудничества SOLO со спортсменками: уровни Бартер, Друг бренда и Амбассадор.">
+  <meta name="description" content="Программа сотрудничества SOLO со спортсменками: Бартер, Друг бренда, Амбассадор.">
   <title>Сотрудничество с SOLO</title>
   <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="sotrudnichestvo.css">
 </head>
-<body class="solo-pdf">
-  <header class="solo-pdf__header">
-    <div class="solo-pdf__header-inner">
-      <a href="../" class="solo-pdf__logo">
+<body class="coop">
+  <a class="coop__skip" href="#main">К содержанию</a>
+
+  <header class="coop__header">
+    <div class="coop__header-inner">
+      <a href="../" class="coop__logo">
         <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
       </a>
-      <a href="#apply" class="solo-pdf__back">Как попасть в программу</a>
+      <nav class="coop__nav" aria-label="Навигация">
+        <a href="#about">О программе</a>
+        <a href="#levels">Уровни</a>
+        <a href="#apply">Участие</a>
+        <a href="#contacts" class="coop__nav-cta">Контакты</a>
+      </nav>
+      <button class="coop__burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="coop__mobile" id="mobileMenu" hidden>
+      <nav>
+        <a href="#about">О программе</a>
+        <a href="#levels">Уровни</a>
+        <a href="#apply">Участие</a>
+        <a href="#contacts">Контакты</a>
+        <a href="../">На главную</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Страница 1 -->
-    <section class="solo-pdf__screen solo-pdf__screen--hero" id="top">
-      <div class="solo-pdf__hero-logo">
-        <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
-      </div>
-      <h1 class="solo-pdf__title">Сотрудничество с SOLO</h1>
-      <p class="solo-pdf__lead">
-        Мы верим, что сильное сотрудничество начинается не с контрактов, а с взаимного интереса, доверия и общих ценностей.
-      </p>
-      <p class="solo-pdf__lead"><strong>В SOLO 3 уровня</strong> взаимодействия со спортсменками:</p>
+  <main id="main">
+    <section class="coop__section coop__section--hero">
+      <div class="coop__hero-glow" aria-hidden="true"></div>
+      <div class="coop__wrap coop__hero-grid coop__reveal">
+        <div>
+          <p class="coop__eyebrow">Программа для спортсменок</p>
+          <h1 class="coop__h1">Сотрудничество с&nbsp;SOLO</h1>
+          <p class="coop__lead">
+            Мы верим, что сильное сотрудничество начинается не с контрактов, а с взаимного интереса, доверия и общих ценностей.
+          </p>
+          <p class="coop__lead"><strong>В SOLO 3 уровня</strong> взаимодействия со спортсменками:</p>
 
-      <div class="solo-pdf__waves">
-        <img class="solo-pdf__waves-bg" src="images/p7_0.webp" alt="" width="1400" height="600" decoding="async">
-        <div class="solo-pdf__levels" aria-hidden="true">
-          <p class="solo-pdf__level-label">Бартер</p>
-          <p class="solo-pdf__level-label">Друг бренда SOLO</p>
-          <p class="solo-pdf__level-label">Амбассадор SOLO</p>
+          <div class="coop__levels-row" id="levels">
+            <a class="coop__level-card" href="#level-1">
+              <span>01</span>
+              <strong>Бартер</strong>
+            </a>
+            <a class="coop__level-card" href="#level-2">
+              <span>02</span>
+              <strong>Друг бренда SOLO</strong>
+            </a>
+            <a class="coop__level-card" href="#level-3">
+              <span>03</span>
+              <strong>Амбассадор SOLO</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="coop__hero-visual">
+          <div class="coop__hero-photo">
+            <img src="images/Maria2.png" alt="Гимнастка SOLO" width="900" height="900" decoding="async">
+          </div>
+        </div>
+      </div>
+      <div class="coop__waves" aria-hidden="true"></div>
+    </section>
+
+    <section class="coop__section coop__section--soft coop__reveal" id="about">
+      <div class="coop__wrap coop__intro-grid">
+        <div>
+          <div class="coop__block">
+            <h2 class="coop__h2">Уровни взаимодействия</h2>
+            <p class="coop__p">
+              Каждый уровень открывает новые возможности и позволяет развивать сотрудничество в комфортном для обеих сторон формате.
+            </p>
+            <p class="coop__p coop__mt">
+              При этом каждый уровень является самостоятельным и может быть долгосрочным.
+            </p>
+          </div>
+          <div class="coop__block">
+            <h2 class="coop__h2">Контент</h2>
+            <p class="coop__p">
+              Мы ценим живой и естественный контент с личными эмоциями и реальным спортивным опытом.
+            </p>
+          </div>
+        </div>
+        <div class="coop__intro-photo">
+          <img src="images/Maria2.png" alt="" width="900" height="900" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
-    <!-- Страница 2 -->
-    <section class="solo-pdf__screen solo-pdf__screen--intro solo-pdf__reveal" id="about">
-      <div class="solo-pdf__container">
-        <div class="solo-pdf__intro-text">
-          <h2 class="solo-pdf__h2">Уровни взаимодействия</h2>
-          <p class="solo-pdf__p">
-            Каждый уровень открывает новые возможности и позволяет развивать сотрудничество в комфортном для обеих сторон формате.
-          </p>
-          <p class="solo-pdf__p">
-            При этом каждый уровень является самостоятельным и может быть долгосрочным.
-          </p>
-
-          <h2 class="solo-pdf__h2">Контент</h2>
-          <p class="solo-pdf__p">
-            Мы ценим живой и естественный контент с личными эмоциями и реальным спортивным опытом.
-          </p>
-        </div>
-
-        <div class="solo-pdf__photo-wrap">
-          <img src="images/p2_0.webp" alt="Гимнастка SOLO" width="1400" height="900" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <!-- Страница 3 -->
-    <section class="solo-pdf__screen solo-pdf__screen--level solo-pdf__reveal" id="level-1">
-      <div class="solo-pdf__container">
-        <header class="solo-pdf__level-head">
-          <h2 class="solo-pdf__title">Уровень 1. Бартер</h2>
-          <p class="solo-pdf__p">
+    <section class="coop__section coop__level-section coop__level-section--barter coop__reveal" id="level-1">
+      <div class="coop__wrap">
+        <header class="coop__level-head">
+          <p class="coop__level-num">Уровень 1</p>
+          <h2 class="coop__level-title">Бартер</h2>
+          <p class="coop__p">
             На этом этапе мы знакомимся со спортсменкой, её подачей и отношением к бренду.
           </p>
         </header>
 
-        <div class="solo-pdf__level-grid">
+        <div class="coop__level-layout">
           <div>
-            <p class="solo-pdf__bar">Что получает гимнастка:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что получает гимнастка</p>
+            <ul class="coop__list">
               <li>разовую отправку продукции SOLO;</li>
               <li>возможность попасть в социальные сети бренда;</li>
               <li>возможность начать путь внутри программы сотрудничества.</li>
             </ul>
-
-            <p class="solo-pdf__bar">Что ожидается от спортсменки:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что ожидается от спортсменки</p>
+            <ul class="coop__list">
               <li>1 рилс с продукцией SOLO;</li>
               <li>1 пост;</li>
               <li>3–5 сторис;</li>
               <li>отметка бренда во всех публикациях, связанных с сотрудничеством.</li>
             </ul>
           </div>
-
-          <div class="solo-pdf__level-visual solo-pdf__level-visual--balls">
-            <span class="solo-pdf__ball solo-pdf__ball--orange" aria-hidden="true"></span>
-            <img src="images/p3_4.webp" alt="Гимнастка с мячом SOLO" width="800" height="1200" loading="lazy" decoding="async">
+          <div class="coop__visual coop__visual--barter">
+            <div class="coop__balls" aria-hidden="true">
+              <img class="coop__ball coop__ball--1 coop__ball--float" src="images/Ball1.png" alt="">
+              <img class="coop__ball coop__ball--2 coop__ball--float" src="images/Ball2.png" alt="">
+              <img class="coop__ball coop__ball--3 coop__ball--float" src="images/Ball3.png" alt="">
+            </div>
+            <figure class="coop__girl-frame">
+              <img class="coop__girl-main" src="images/Girl%20and%20Ball1.png" alt="Гимнастка с мячом SOLO" width="1951" height="1570" loading="lazy" decoding="async">
+            </figure>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Страница 4 -->
-    <section class="solo-pdf__screen solo-pdf__screen--level solo-pdf__reveal" id="level-2">
-      <div class="solo-pdf__container">
-        <header class="solo-pdf__level-head">
-          <h2 class="solo-pdf__title">Уровень 2. Друг бренда SOLO</h2>
-          <p class="solo-pdf__p">
+    <section class="coop__section coop__section--soft coop__level-section coop__reveal" id="level-2">
+      <div class="coop__wrap">
+        <header class="coop__level-head">
+          <p class="coop__level-num">Уровень 2</p>
+          <h2 class="coop__level-title">Друг бренда SOLO</h2>
+          <p class="coop__p">
             Статус для гимнасток, с которыми у бренда уже сложились хорошие отношения, комфортная коммуникация и взаимное доверие.
             На этом этапе гимнастка становится частью сообщества SOLO.
           </p>
         </header>
 
-        <div class="solo-pdf__level-grid">
+        <div class="coop__level-layout coop__level-layout--reverse">
           <div>
-            <p class="solo-pdf__bar">Что получает гимнастка:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что получает гимнастка</p>
+            <ul class="coop__list">
               <li>периодические отправки продукции;</li>
               <li>отдельные позиции экипировки;</li>
               <li>новинки бренда;</li>
@@ -124,37 +163,35 @@
               <li>возможность влиять на развитие бренда;</li>
               <li>идеи и поддержку по созданию контента.</li>
             </ul>
-
-            <p class="solo-pdf__bar">Что ожидается от спортсменки:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что ожидается от спортсменки</p>
+            <ul class="coop__list">
               <li>регулярное присутствие SOLO в аккаунте спортсменки;</li>
               <li>естественная интеграция бренда в спортивную жизнь;</li>
               <li>поддержание контакта с командой бренда.</li>
             </ul>
           </div>
-
-          <div class="solo-pdf__level-visual">
-            <img src="images/p4_2.webp" alt="Гимнастка SOLO" width="800" height="1200" loading="lazy" decoding="async">
+          <div class="coop__visual">
+            <img src="images/Maria1.png" alt="Гимнастка SOLO" width="800" height="1000" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Страница 5 -->
-    <section class="solo-pdf__screen solo-pdf__screen--level solo-pdf__reveal" id="level-3">
-      <div class="solo-pdf__container">
-        <header class="solo-pdf__level-head">
-          <h2 class="solo-pdf__title">Уровень 3. Амбассадор SOLO</h2>
-          <p class="solo-pdf__p">
+    <section class="coop__section coop__level-section coop__reveal" id="level-3">
+      <div class="coop__wrap">
+        <header class="coop__level-head">
+          <p class="coop__level-num">Уровень 3</p>
+          <h2 class="coop__level-title">Амбассадор SOLO</h2>
+          <p class="coop__p">
             Высший уровень сотрудничества внутри программы. Амбассадоры SOLO становятся частью публичного образа бренда
             и представляют его внутри спортивного сообщества.
           </p>
         </header>
 
-        <div class="solo-pdf__level-grid">
+        <div class="coop__level-layout">
           <div>
-            <p class="solo-pdf__bar">Что получает гимнастка:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что получает гимнастка</p>
+            <ul class="coop__list">
               <li>комплекты из коллекций SOLO;</li>
               <li>регулярное обновление экипировки;</li>
               <li>поддержка под турниры и сборы;</li>
@@ -166,9 +203,8 @@
               <li>активное продвижение в социальных сетях SOLO;</li>
               <li>участие в закрытом сообществе бренда.</li>
             </ul>
-
-            <p class="solo-pdf__bar">Что ожидается от спортсменки:</p>
-            <ul class="solo-pdf__list">
+            <p class="coop__label">Что ожидается от спортсменки</p>
+            <ul class="coop__list">
               <li>регулярное присутствие SOLO в аккаунте спортсменки;</li>
               <li>участие в проектах и активностях бренда;</li>
               <li>участие в развитии и продвижении SOLO;</li>
@@ -176,72 +212,98 @@
               <li>понимание того, что репутация и публичное поведение спортсменки влияют на восприятие бренда.</li>
             </ul>
           </div>
-
-          <div class="solo-pdf__level-visual">
-            <img src="images/p5_0.webp" alt="Гимнастка SOLO" width="800" height="1200" loading="lazy" decoding="async">
+          <div class="coop__visual coop__visual--light">
+            <img src="images/Maria4.png" alt="Гимнастка SOLO" width="700" height="1100" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Страница 6 -->
-    <section class="solo-pdf__screen solo-pdf__screen--brands solo-pdf__reveal" id="brands">
-      <div class="solo-pdf__container">
-        <h2 class="solo-pdf__brands-title">
-          Сотрудничество<br>
-          спортсменок<br>
-          с другими брендами
+    <section class="coop__section coop__section--soft coop__reveal" id="brands">
+      <div class="coop__wrap coop__brands">
+        <h2 class="coop__brands-title">
+          Сотрудничество спортсменок<br>с другими брендами
         </h2>
-
-        <div class="solo-pdf__brands-grid">
-          <div class="solo-pdf__brands-photo">
-            <img src="images/p6_0.webp" alt="Спортсменка в экипировке SOLO" width="800" height="1100" loading="lazy" decoding="async">
-          </div>
-
-          <div class="solo-pdf__brands-copy">
-            <p>
-              <strong>На уровнях «Бартер»<br>
-              и «Друг бренда SOLO»<br>
-              мы не требуем эксклюзивности,</strong>
-              однако просим учитывать интересы бренда и по возможности избегать одновременного активного продвижения прямых конкурентов SOLO.
-            </p>
-            <p class="solo-pdf__highlight">
-              Для амбассадоров SOLO вопрос сотрудничества с брендами, являющимися прямыми конкурентами, обсуждается индивидуально с командой бренда.
-            </p>
-            <p>
-              Мы всегда стараемся находить решения, комфортные для обеих сторон.
-            </p>
-          </div>
+        <div class="coop__brands-photo">
+          <img src="images/Maria3.png" alt="Спортсменка в экипировке SOLO" width="800" height="1000" loading="lazy" decoding="async">
+        </div>
+        <div class="coop__brands-copy">
+          <p>
+            <strong>На уровнях «Бартер» и «Друг бренда SOLO» мы не требуем эксклюзивности,</strong>
+            однако просим учитывать интересы бренда и по возможности избегать одновременного активного продвижения прямых конкурентов SOLO.
+          </p>
+          <p class="coop__note">
+            Для амбассадоров SOLO вопрос сотрудничества с брендами, являющимися прямыми конкурентами, обсуждается индивидуально с командой бренда.
+          </p>
+          <p>
+            Мы всегда стараемся находить решения, комфортные для обеих сторон.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Страница 7 -->
-    <section class="solo-pdf__screen solo-pdf__screen--apply solo-pdf__reveal" id="apply">
-      <img class="solo-pdf__apply-waves" src="images/p7_0.webp" alt="" width="1400" height="600" decoding="async" aria-hidden="true">
-
-      <div class="solo-pdf__container solo-pdf__apply-inner">
-        <div>
-          <h2 class="solo-pdf__h2">Как попасть в программу?</h2>
-          <p class="solo-pdf__p">
-            Мы ищем тех, кто искренне разделяет философию SOLO и хочет стать частью нашего сообщества.
-          </p>
-          <p class="solo-pdf__p">
-            При рассмотрении кандидатур мы оцениваем не только результаты в спорте или размер аудитории. Для нас не менее важны ценности спортсменки, её отношение к тренировкам, стиль общения с подписчиками, качество контента и готовность к долгосрочному взаимодействию.
-          </p>
-        </div>
-
-        <p class="solo-pdf__cta-bar">
-          Если тебе близка философия SOLO,<br>
-          будем рады познакомиться!
+    <section class="coop__section coop__apply coop__reveal" id="apply">
+      <div class="coop__apply-waves" aria-hidden="true"></div>
+      <div class="coop__wrap coop__apply-inner">
+        <h2 class="coop__h2">Как попасть в программу?</h2>
+        <p class="coop__p">
+          Мы ищем тех, кто искренне разделяет философию SOLO и хочет стать частью нашего сообщества.
+        </p>
+        <p class="coop__p coop__mt">
+          При рассмотрении кандидатур мы оцениваем не только результаты в спорте или размер аудитории. Для нас не менее важны ценности спортсменки, её отношение к тренировкам, стиль общения с подписчиками, качество контента и готовность к долгосрочному взаимодействию.
+        </p>
+        <p class="coop__cta-line">
+          Если тебе близка философия SOLO,<br>будем рады познакомиться!
         </p>
       </div>
+    </section>
 
-      <a href="https://solorussia.com/" class="solo-pdf__footer-logo" target="_blank" rel="noopener">
-        <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
-      </a>
+    <section class="coop__section coop__section--soft coop__reveal" id="contacts">
+      <div class="coop__wrap">
+        <header class="coop__level-head">
+          <p class="coop__eyebrow">Связь с командой</p>
+          <h2 class="coop__h2">Контакты</h2>
+          <p class="coop__p">
+            Напишите или позвоните — ответим на вопросы о программе и обсудим возможное сотрудничество.
+          </p>
+        </header>
+
+        <div class="coop__contacts-grid">
+          <article class="coop__contact-card">
+            <h3>Телефон</h3>
+            <a href="tel:+79267001814">+7 926 700 1814</a>
+          </article>
+
+          <article class="coop__contact-card">
+            <h3>E-mail</h3>
+            <a href="mailto:store@swimsolo.ru">store@swimsolo.ru</a>
+          </article>
+
+          <article class="coop__contact-card">
+            <h3>Основной сайт</h3>
+            <a href="https://solorussia.com/" target="_blank" rel="noopener">solorussia.com</a>
+            <p class="coop__p">Интернет-магазин и каталог SOLO</p>
+          </article>
+
+          <article class="coop__contact-card coop__contact-card--wide">
+            <h3>Социальные сети</h3>
+            <div class="coop__socials">
+              <a class="coop__social" href="https://vk.com/solorussia" target="_blank" rel="noopener">ВКонтакте</a>
+              <a class="coop__social" href="https://t.me/solorussia" target="_blank" rel="noopener">Telegram</a>
+              <a class="coop__social" href="https://t.me/+79267001814" target="_blank" rel="noopener">Написать в Telegram</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="coop__footer">
+    <div class="coop__wrap">
+      <a href="../"><img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO" width="100" height="32"></a>
+      <p><a href="#contacts">Контакты</a> · <a href="https://solorussia.com/" target="_blank" rel="noopener">solorussia.com</a></p>
+    </div>
+  </footer>
 
   <script src="sotrudnichestvo.js"></script>
 </body>
