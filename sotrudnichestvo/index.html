@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Программа сотрудничества SOLO со спортсменками: Бартер, Друг бренда, Амбассадор.">
   <title>Сотрудничество с SOLO</title>
+  <base id="site-base" href="/sotrudnichestvo/">
+  <script>
+    if (location.protocol === "file:") {
+      document.getElementById("site-base").href = "./";
+    }
+  </script>
   <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="sotrudnichestvo.css">
 </head>
