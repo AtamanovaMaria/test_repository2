@@ -392,6 +392,10 @@ a {
   align-items: center;
 }
 
+#level-1 .coop__level-layout {
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 54%);
+}
+
 .coop__level-layout--reverse {
   direction: rtl;
 }
@@ -500,7 +504,7 @@ a {
   overflow: visible;
   align-items: center;
   justify-content: center;
-  min-height: 340px;
+  min-height: 400px;
   margin-bottom: clamp(-48px, -6vw, -72px);
   padding-inline: clamp(8px, 2vw, 24px);
 }
@@ -511,7 +515,7 @@ a {
   pointer-events: none;
   margin: -1.5rem 0 0;
   width: 100%;
-  max-width: min(100%, 560px);
+  max-width: min(100%, 760px);
   display: flex;
   justify-content: center;
   transform: translateY(-28px);
@@ -521,8 +525,8 @@ a {
   display: block;
   width: auto;
   height: auto;
-  max-width: 100%;
-  max-height: min(75vh, 560px);
+  max-width: min(100%, 760px);
+  max-height: min(90vh, 720px);
   aspect-ratio: 1951 / 1570;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
@@ -827,10 +831,12 @@ a {
   .coop__girl-frame {
     transform: translateY(-16px);
     margin-top: -0.5rem;
+    max-width: 100%;
   }
 
   .coop__visual--barter .coop__girl-main {
-    max-height: min(62vh, 420px);
+    max-width: 100%;
+    max-height: min(72vh, 520px);
   }
 
   .coop__visual--barter .coop__ball--1 {
