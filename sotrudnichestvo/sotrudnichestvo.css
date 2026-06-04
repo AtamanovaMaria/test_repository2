@@ -1,0 +1,453 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #fe5149;
+  --red-deep: #e83830;
+  --pink: #ffc9c6;
+  --pink-soft: #fff0ef;
+  --text: #000;
+  --container: 72rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.solo-pdf {
+  margin: 0;
+  font-family: AvenirNextCyr, Arial, sans-serif;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.45;
+  color: var(--text);
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.solo-pdf__header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.solo-pdf__header-inner {
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.solo-pdf__logo img {
+  width: clamp(100px, 14vw, 140px);
+  height: auto;
+}
+
+.solo-pdf__back {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--red);
+}
+
+.solo-pdf__screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.solo-pdf__screen--hero {
+  min-height: min(92vh, 900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 4rem) 16px 0;
+}
+
+.solo-pdf__hero-logo {
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.solo-pdf__hero-logo img {
+  width: clamp(120px, 18vw, 180px);
+  margin-inline: auto;
+}
+
+.solo-pdf__title {
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.2vw + 0.5rem, 2.35rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.solo-pdf__lead {
+  margin: 0 auto 0.75rem;
+  max-width: 42rem;
+  font-weight: 400;
+}
+
+.solo-pdf__lead strong {
+  font-weight: 700;
+}
+
+.solo-pdf__waves {
+  position: relative;
+  width: 100%;
+  max-width: var(--container);
+  margin-top: auto;
+  flex: 1;
+  display: grid;
+  align-items: end;
+  min-height: 280px;
+}
+
+.solo-pdf__waves-bg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.solo-pdf__levels {
+  position: absolute;
+  inset: 12% 8% 28%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  pointer-events: none;
+}
+
+.solo-pdf__level-label {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.4vw, 1.15rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.solo-pdf__level-label:nth-child(1) {
+  align-self: start;
+  justify-self: start;
+  text-align: left;
+  padding-left: 4%;
+}
+
+.solo-pdf__level-label:nth-child(2) {
+  align-self: center;
+}
+
+.solo-pdf__level-label:nth-child(3) {
+  align-self: end;
+  justify-self: end;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.solo-pdf__container {
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+.solo-pdf__screen--intro {
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem);
+}
+
+.solo-pdf__intro-text {
+  max-width: 36rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.solo-pdf__h2 {
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.5vw + 0.4rem, 1.45rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.solo-pdf__p {
+  margin: 0 0 1.75rem;
+}
+
+.solo-pdf__photo-wrap {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.solo-pdf__photo-wrap img {
+  width: 100%;
+  height: auto;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12%, #000 100%);
+}
+
+.solo-pdf__screen--level {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.solo-pdf__level-head {
+  text-align: center;
+  max-width: 52rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.solo-pdf__level-head .solo-pdf__title {
+  margin-bottom: 1rem;
+}
+
+.solo-pdf__level-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 42%);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.solo-pdf__bar {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.45em 3em 0.45em 0;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, var(--red) 0%, rgba(254, 81, 73, 0) 88%);
+}
+
+.solo-pdf__list {
+  margin: 0 0 2rem;
+  padding-left: 1.2rem;
+}
+
+.solo-pdf__list li {
+  margin-bottom: 0.35rem;
+}
+
+.solo-pdf__list li::marker {
+  color: var(--text);
+}
+
+.solo-pdf__level-visual {
+  position: relative;
+  min-height: 280px;
+}
+
+.solo-pdf__level-visual img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.08));
+}
+
+.solo-pdf__level-visual--balls::before,
+.solo-pdf__level-visual--balls::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.solo-pdf__level-visual--balls::before {
+  width: 28%;
+  aspect-ratio: 1;
+  left: -4%;
+  bottom: 8%;
+  background: radial-gradient(circle at 30% 30%, #ff6b9d, #fe5149);
+}
+
+.solo-pdf__level-visual--balls::after {
+  width: 22%;
+  aspect-ratio: 1;
+  right: 8%;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, #5ee0ff, #00b8d9);
+}
+
+.solo-pdf__ball {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.solo-pdf__ball--orange {
+  width: 18%;
+  left: 18%;
+  bottom: 2%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 35% 30%, #ffb347, #ff8c00);
+}
+
+.solo-pdf__screen--brands {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.solo-pdf__brands-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.solo-pdf__brands-title {
+  text-align: center;
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.solo-pdf__brands-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.solo-pdf__brands-copy {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.solo-pdf__brands-copy p {
+  margin: 0;
+}
+
+.solo-pdf__brands-copy strong {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.solo-pdf__highlight {
+  padding: 1rem 1.25rem 1rem 0;
+  background: linear-gradient(90deg, var(--red) 0%, rgba(254, 81, 73, 0) 92%);
+}
+
+.solo-pdf__screen--apply {
+  position: relative;
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(4rem, 10vw, 7rem);
+  min-height: 70vh;
+}
+
+.solo-pdf__apply-waves {
+  position: absolute;
+  inset: auto 0 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.solo-pdf__apply-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.solo-pdf__cta-bar {
+  justify-self: end;
+  text-align: right;
+  margin-top: clamp(2rem, 8vw, 6rem);
+  padding: 0.5em 0 0.5em 2em;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+  background: linear-gradient(270deg, var(--red) 0%, rgba(254, 81, 73, 0) 88%);
+}
+
+.solo-pdf__footer-logo {
+  position: absolute;
+  left: max(16px, calc((100% - var(--container)) / 2));
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  z-index: 2;
+}
+
+.solo-pdf__footer-logo img {
+  width: clamp(90px, 12vw, 130px);
+}
+
+.solo-pdf__reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.solo-pdf__reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .solo-pdf__levels {
+    position: static;
+    inset: auto;
+    margin-top: -18%;
+    padding: 0 8px 24px;
+    gap: 12px;
+  }
+
+  .solo-pdf__level-label {
+    font-size: 0.75rem;
+    text-align: center !important;
+    padding: 0 !important;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  .solo-pdf__level-grid,
+  .solo-pdf__brands-grid,
+  .solo-pdf__apply-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .solo-pdf__level-visual {
+    order: -1;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .solo-pdf__cta-bar {
+    justify-self: start;
+    text-align: left;
+    background: linear-gradient(90deg, var(--red) 0%, rgba(254, 81, 73, 0) 88%);
+    padding: 0.5em 2em 0.5em 0;
+  }
+
+  .solo-pdf__brands-photo {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .solo-pdf__screen--hero {
+    min-height: auto;
+  }
+
+  .solo-pdf__waves {
+    min-height: 200px;
+  }
+}
