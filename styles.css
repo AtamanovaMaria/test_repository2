@@ -167,18 +167,7 @@ textarea {
   width: auto;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.7s var(--ease),
-    transform 0.7s var(--ease);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+@import url("reveal.css");
 
 .header {
   position: sticky;
@@ -1272,8 +1261,7 @@ textarea:focus {
     scroll-behavior: auto;
   }
 
-  *,
-  .reveal {
+  * {
     animation: none !important;
     transition: none !important;
   }

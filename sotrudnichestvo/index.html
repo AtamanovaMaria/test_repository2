@@ -12,6 +12,7 @@
     }
   </script>
   <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="../reveal.css">
   <link rel="stylesheet" href="sotrudnichestvo.css">
 </head>
 <body class="coop">
@@ -46,7 +47,7 @@
   <main id="main">
     <section class="coop__section coop__section--hero">
       <div class="coop__hero-glow" aria-hidden="true"></div>
-      <div class="coop__wrap coop__hero-grid coop__reveal">
+      <div class="coop__wrap coop__hero-grid reveal">
         <div>
           <p class="coop__eyebrow">Программа для спортсменок</p>
           <h1 class="coop__h1">Сотрудничество с&nbsp;SOLO</h1>
@@ -80,7 +81,7 @@
       <div class="coop__waves" aria-hidden="true"></div>
     </section>
 
-    <section class="coop__section coop__section--soft coop__reveal" id="about">
+    <section class="coop__section coop__section--soft reveal" id="about">
       <div class="coop__wrap coop__intro-grid">
         <div>
           <div class="coop__block">
@@ -105,7 +106,7 @@
       </div>
     </section>
 
-    <section class="coop__section coop__level-section coop__level-section--barter coop__reveal" id="level-1">
+    <section class="coop__section coop__level-section coop__level-section--barter reveal" id="level-1">
       <div class="coop__wrap">
         <header class="coop__level-head">
           <p class="coop__level-num">Уровень 1</p>
@@ -145,7 +146,7 @@
       </div>
     </section>
 
-    <section class="coop__section coop__section--soft coop__level-section coop__reveal" id="level-2">
+    <section class="coop__section coop__section--soft coop__level-section reveal" id="level-2">
       <div class="coop__wrap">
         <header class="coop__level-head">
           <p class="coop__level-num">Уровень 2</p>
@@ -176,14 +177,14 @@
               <li>поддержание контакта с командой бренда.</li>
             </ul>
           </div>
-          <div class="coop__visual">
-            <img src="images/Maria1.png" alt="Гимнастка SOLO" width="800" height="1000" loading="lazy" decoding="async">
+          <div class="coop__visual coop__visual--light">
+            <img class="coop__girl-flip" src="images/Maria1.png" alt="Гимнастка SOLO" width="800" height="1000" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="coop__section coop__level-section coop__level-section--tier3 coop__reveal" id="level-3">
+    <section class="coop__section coop__level-section coop__level-section--tier3 reveal" id="level-3">
       <div class="coop__wrap">
         <header class="coop__level-head">
           <p class="coop__level-num">Уровень 3</p>
@@ -196,7 +197,7 @@
 
         <div class="coop__level-layout">
           <div class="coop__level-copy coop__level-copy--tier3">
-            <article class="coop__block-card">
+            <div class="coop__tier3-group">
               <h3 class="coop__subhead">Что получает гимнастка</h3>
               <ul class="coop__list coop__list--tier3">
                 <li>комплекты из коллекций SOLO;</li>
@@ -210,8 +211,8 @@
                 <li>активное продвижение в социальных сетях SOLO;</li>
                 <li>участие в закрытом сообществе бренда.</li>
               </ul>
-            </article>
-            <article class="coop__block-card">
+            </div>
+            <div class="coop__tier3-group">
               <h3 class="coop__subhead">Что ожидается от спортсменки</h3>
               <ul class="coop__list coop__list--tier3">
                 <li>регулярное присутствие SOLO в аккаунте спортсменки;</li>
@@ -220,7 +221,7 @@
                 <li>лояльность бренду;</li>
                 <li>понимание того, что репутация и публичное поведение спортсменки влияют на восприятие бренда.</li>
               </ul>
-            </article>
+            </div>
           </div>
           <div class="coop__visual coop__visual--light">
             <img class="coop__girl-flip" src="images/Maria4.png" alt="Гимнастка SOLO" width="700" height="1100" loading="lazy" decoding="async">
@@ -229,7 +230,7 @@
       </div>
     </section>
 
-    <section class="coop__section coop__section--soft coop__reveal" id="brands">
+    <section class="coop__section coop__section--soft reveal" id="brands">
       <div class="coop__wrap coop__brands">
         <h2 class="coop__brands-title">
           Сотрудничество спортсменок<br>с другими брендами
@@ -252,7 +253,7 @@
       </div>
     </section>
 
-    <section class="coop__section coop__apply coop__reveal" id="apply">
+    <section class="coop__section coop__apply reveal" id="apply">
       <div class="coop__apply-waves" aria-hidden="true"></div>
       <div class="coop__wrap coop__apply-inner">
         <h2 class="coop__h2">Как попасть в программу?</h2>
@@ -268,7 +269,7 @@
       </div>
     </section>
 
-    <section class="coop__section coop__section--soft coop__reveal" id="contacts">
+    <section class="coop__section coop__section--soft reveal" id="contacts">
       <div class="coop__wrap">
         <header class="coop__level-head">
           <p class="coop__eyebrow">Связь с командой</p>
@@ -315,6 +316,7 @@
     </div>
   </footer>
 
+  <script src="../reveal.js"></script>
   <script src="sotrudnichestvo.js"></script>
 </body>
 </html>
