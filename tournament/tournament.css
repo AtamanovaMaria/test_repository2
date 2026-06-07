@@ -221,6 +221,20 @@ button {
   font-size: clamp(0.92rem, 2.6vw + 0.35rem, 2.85rem);
   white-space: nowrap;
   max-width: 100%;
+  background: linear-gradient(
+    105deg,
+    #9a7424 0%,
+    #c9a227 18%,
+    #f5e6a8 38%,
+    #d4af37 52%,
+    #f8e7a8 68%,
+    #b8860b 82%,
+    #8f6b1f 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .tour__h2 {
@@ -898,57 +912,82 @@ button {
 }
 
 .tour__lightbox--protocol {
-  padding: 16px 64px;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: stretch;
+  background: rgba(0, 0, 0, 0.92);
 }
 
 .tour__lightbox--protocol .tour__lightbox-inner {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100vh;
   max-height: none;
-  height: calc(100vh - 32px);
-  width: min(1180px, calc(100vw - 160px));
   max-width: none;
+  margin: 0;
   overflow: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
   background: #fff;
-  border-radius: 14px;
-  padding: 12px 12px 16px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  border-radius: 0;
+  padding: 56px 0 24px;
+  box-shadow: none;
+  gap: 16px;
 }
 
 .tour__lightbox--protocol .tour__lightbox-inner img {
   display: block;
-  width: 100%;
+  width: 96vw;
   max-width: none;
+  min-width: min(96vw, 1680px);
   max-height: none;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
   object-fit: none;
+  image-rendering: auto;
 }
 
 .tour__lightbox--protocol .tour__lightbox-inner figcaption {
   flex-shrink: 0;
-  margin-top: 12px;
-  padding-top: 12px;
+  width: min(96vw, 1680px);
+  margin: 0;
+  padding: 12px 16px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   color: var(--text);
   font-size: 15px;
   font-weight: 500;
+  text-align: center;
 }
 
 .tour__lightbox--protocol .tour__lightbox-close {
-  background: rgba(255, 255, 255, 0.16);
-  z-index: 2;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 3;
 }
 
 .tour__lightbox--protocol .tour__lightbox-prev,
 .tour__lightbox--protocol .tour__lightbox-next {
-  align-self: center;
-  position: sticky;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 3;
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.tour__lightbox--protocol .tour__lightbox-prev {
+  left: 16px;
+}
+
+.tour__lightbox--protocol .tour__lightbox-next {
+  right: 16px;
 }
 
 @media (max-width: 960px) {
@@ -1025,34 +1064,36 @@ button {
   }
 
   .tour__lightbox--protocol {
-    padding: 56px 8px 12px;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 1fr;
-    align-items: stretch;
+    padding: 0;
   }
 
   .tour__lightbox--protocol .tour__lightbox-inner {
-    width: 100%;
-    height: calc(100vh - 72px);
-    grid-column: 1 / -1;
-    grid-row: 1;
+    height: 100vh;
+    padding: 52px 0 20px;
+  }
+
+  .tour__lightbox--protocol .tour__lightbox-inner img {
+    width: 100vw;
+    min-width: 100vw;
+  }
+
+  .tour__lightbox--protocol .tour__lightbox-inner figcaption {
+    width: calc(100vw - 32px);
   }
 
   .tour__lightbox--protocol .tour__lightbox-prev,
   .tour__lightbox--protocol .tour__lightbox-next {
-    position: fixed;
     top: auto;
     bottom: 16px;
     transform: none;
-    z-index: 2;
   }
 
   .tour__lightbox--protocol .tour__lightbox-prev {
-    left: 16px;
+    left: 12px;
   }
 
   .tour__lightbox--protocol .tour__lightbox-next {
-    right: 16px;
+    right: 12px;
   }
 }
 

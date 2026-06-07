@@ -68,6 +68,9 @@ function showLightboxItem(item) {
   if (!lightbox || !item) return;
   const isProtocol = item.classList.contains("tour__protocol-page");
   lightbox.classList.toggle("tour__lightbox--protocol", isProtocol);
+  lightboxImg.style.width = "";
+  lightboxImg.style.minWidth = "";
+  lightboxImg.style.maxWidth = "";
   lightboxImg.src = item.dataset.full;
   lightboxImg.alt = item.querySelector("img")?.alt || item.dataset.caption || "";
   lightboxCaption.textContent = item.dataset.caption || "";
@@ -76,8 +79,26 @@ function showLightboxItem(item) {
 
   if (isProtocol) {
     lightbox.querySelector(".tour__lightbox-inner")?.scrollTo(0, 0);
+    if (lightboxImg.complete) {
+      scaleProtocolImage();
+    }
   }
 }
+
+function scaleProtocolImage() {
+  if (!lightbox?.classList.contains("tour__lightbox--protocol")) return;
+  const targetWidth = Math.min(window.innerWidth * 0.96, 1680);
+  lightboxImg.style.width = `${targetWidth}px`;
+  lightboxImg.style.maxWidth = "none";
+  lightboxImg.style.height = "auto";
+}
+
+lightboxImg?.addEventListener("load", scaleProtocolImage);
+window.addEventListener("resize", () => {
+  if (!lightbox?.hidden && lightbox.classList.contains("tour__lightbox--protocol")) {
+    scaleProtocolImage();
+  }
+});
 
 function openLightbox(item) {
   activeLightboxItems = getLightboxGroup(item);
@@ -91,6 +112,9 @@ function closeLightbox() {
   lightbox.hidden = true;
   lightbox.classList.remove("tour__lightbox--protocol");
   lightboxImg.src = "";
+  lightboxImg.style.width = "";
+  lightboxImg.style.minWidth = "";
+  lightboxImg.style.maxWidth = "";
   document.body.style.overflow = "";
 }
 
