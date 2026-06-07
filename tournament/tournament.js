@@ -66,11 +66,17 @@ function getLightboxGroup(trigger) {
 
 function showLightboxItem(item) {
   if (!lightbox || !item) return;
+  const isProtocol = item.classList.contains("tour__protocol-page");
+  lightbox.classList.toggle("tour__lightbox--protocol", isProtocol);
   lightboxImg.src = item.dataset.full;
   lightboxImg.alt = item.querySelector("img")?.alt || item.dataset.caption || "";
   lightboxCaption.textContent = item.dataset.caption || "";
   lightbox.hidden = false;
   document.body.style.overflow = "hidden";
+
+  if (isProtocol) {
+    lightbox.querySelector(".tour__lightbox-inner")?.scrollTo(0, 0);
+  }
 }
 
 function openLightbox(item) {
@@ -83,6 +89,7 @@ function openLightbox(item) {
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.hidden = true;
+  lightbox.classList.remove("tour__lightbox--protocol");
   lightboxImg.src = "";
   document.body.style.overflow = "";
 }
