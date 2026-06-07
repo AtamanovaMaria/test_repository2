@@ -46,15 +46,15 @@ document.querySelectorAll(".tour__tab").forEach((tab) => {
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const lightboxCaption = document.getElementById("lightboxCaption");
-const galleryItems = Array.from(document.querySelectorAll(".tour__gallery-item"));
+const lightboxItems = Array.from(document.querySelectorAll(".tour__lightbox-trigger"));
 let currentIndex = 0;
 
 function openLightbox(index) {
-  if (!lightbox || !galleryItems.length) return;
+  if (!lightbox || !lightboxItems.length) return;
   currentIndex = index;
-  const item = galleryItems[currentIndex];
+  const item = lightboxItems[currentIndex];
   lightboxImg.src = item.dataset.full;
-  lightboxImg.alt = item.querySelector("img")?.alt || "";
+  lightboxImg.alt = item.querySelector("img")?.alt || item.dataset.caption || "";
   lightboxCaption.textContent = item.dataset.caption || "";
   lightbox.hidden = false;
   document.body.style.overflow = "hidden";
@@ -68,12 +68,12 @@ function closeLightbox() {
 }
 
 function showAdjacent(step) {
-  if (!galleryItems.length) return;
-  currentIndex = (currentIndex + step + galleryItems.length) % galleryItems.length;
+  if (!lightboxItems.length) return;
+  currentIndex = (currentIndex + step + lightboxItems.length) % lightboxItems.length;
   openLightbox(currentIndex);
 }
 
-galleryItems.forEach((item, index) => {
+lightboxItems.forEach((item, index) => {
   item.addEventListener("click", () => openLightbox(index));
 });
 
