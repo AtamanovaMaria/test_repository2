@@ -494,6 +494,96 @@ button {
   background: linear-gradient(145deg, #d4a574, #a66b2a);
 }
 
+.tour__streams {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tour__stream {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+}
+
+.tour__stream:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 64px rgba(254, 81, 73, 0.18);
+}
+
+.tour__stream:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.tour__stream img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s var(--ease);
+}
+
+.tour__stream:hover img {
+  transform: scale(1.04);
+}
+
+.tour__stream-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.15) 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.tour__stream-play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 8px 24px rgba(254, 81, 73, 0.45);
+  position: relative;
+  transition: transform 0.2s var(--ease), background 0.2s;
+}
+
+.tour__stream-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.tour__stream:hover .tour__stream-play {
+  transform: scale(1.08);
+  background: var(--red-hover);
+}
+
+.tour__stream-label {
+  margin-top: 0.35rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tour__stream-hint {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
 .tour__gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -733,6 +823,7 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .tour__streams,
   .tour__gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -760,6 +851,10 @@ button {
 
   .tour__tab {
     flex-shrink: 0;
+  }
+
+  .tour__streams {
+    grid-template-columns: 1fr;
   }
 
   .tour__gallery {
@@ -792,7 +887,10 @@ button {
     scroll-behavior: auto;
   }
 
-  .tour__gallery-item {
+  .tour__gallery-item,
+  .tour__stream,
+  .tour__stream img,
+  .tour__stream-play {
     transition: none;
   }
 }
