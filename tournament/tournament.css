@@ -838,6 +838,57 @@ button {
   color: var(--red);
 }
 
+#contacts {
+  scroll-margin-top: 88px;
+}
+
+.tour__head--center {
+  text-align: center;
+}
+
+.tour__head--center .tour__p {
+  margin-inline: auto;
+}
+
+.tour__contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tour__contact-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.25s;
+}
+
+.tour__contact-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(254, 81, 73, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.tour__contact-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.tour__contact-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
 .tour__lightbox {
   position: fixed;
   inset: 0;
@@ -1005,6 +1056,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .tour__contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .tour__streams,
   .tour__gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -1036,6 +1091,10 @@ button {
   }
 
   .tour__streams {
+    grid-template-columns: 1fr;
+  }
+
+  .tour__contacts-grid {
     grid-template-columns: 1fr;
   }
 
