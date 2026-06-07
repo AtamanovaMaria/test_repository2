@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SOLO Cup — турнир по художественной гимнастике: расписание, результаты, фотогалерея и розыгрыш призов.">
+  <title>SOLO Cup — турнир по художественной гимнастике</title>
+  <base id="site-base" href="/tournament/">
+  <script>
+    if (location.protocol === "file:") {
+      document.getElementById("site-base").href = "./";
+    }
+  </script>
+  <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="../reveal.css">
+  <link rel="stylesheet" href="tournament.css">
+</head>
+<body class="tour">
+  <a class="tour__skip" href="#main">К содержанию</a>
+
+  <header class="tour__header">
+    <div class="tour__header-inner">
+      <a href="../" class="tour__logo">
+        <img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO">
+      </a>
+      <nav class="tour__nav" aria-label="Навигация">
+        <a href="#schedule">Расписание</a>
+        <a href="#results">Результаты</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#raffle" class="tour__nav-cta">Розыгрыш</a>
+      </nav>
+      <button class="tour__burger" type="button" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="tour__mobile" id="mobileMenu" hidden>
+      <nav>
+        <a href="#schedule">Расписание</a>
+        <a href="#results">Результаты</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#raffle">Розыгрыш</a>
+        <a href="../">На главную</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="tour__section tour__section--hero reveal">
+      <div class="tour__hero-glow" aria-hidden="true"></div>
+      <div class="tour__wrap tour__hero-grid">
+        <div>
+          <p class="tour__eyebrow">Художественная гимнастика</p>
+          <h1 class="tour__h1">SOLO Cup</h1>
+          <p class="tour__lead">
+            Трёхдневный турнир для спортсменок всех возрастных категорий.
+            <strong>14–16 ноября 2025</strong> · Москва, спортивный комплекс «Олимпийский».
+          </p>
+          <ul class="tour__hero-stats">
+            <li><span>3</span> дня соревнований</li>
+            <li><span>12</span> возрастных групп</li>
+            <li><span>200+</span> участниц</li>
+          </ul>
+          <div class="tour__hero-actions">
+            <a class="tour__btn tour__btn--primary" href="#schedule">Смотреть расписание</a>
+            <a class="tour__btn tour__btn--ghost" href="#results">Результаты</a>
+          </div>
+        </div>
+        <div class="tour__hero-visual">
+          <div class="tour__hero-photo">
+            <img src="../sotrudnichestvo/images/Girl and Ball1.png" alt="Гимнастка с мячом SOLO">
+          </div>
+        </div>
+      </div>
+      <div class="tour__waves" aria-hidden="true"></div>
+    </section>
+
+    <section class="tour__section tour__section--soft reveal" id="schedule">
+      <div class="tour__wrap">
+        <header class="tour__head">
+          <p class="tour__eyebrow">Программа</p>
+          <h2 class="tour__h2">Расписание</h2>
+          <p class="tour__p">Соревнования проходят в три дня. Выберите день, чтобы увидеть полную программу.</p>
+        </header>
+
+        <div class="tour__tabs" role="tablist" aria-label="Дни турнира">
+          <button class="tour__tab is-active" role="tab" aria-selected="true" aria-controls="schedule-day-1" id="tab-schedule-1" data-tab-group="schedule" data-tab="1">День 1 · 14 ноября</button>
+          <button class="tour__tab" role="tab" aria-selected="false" aria-controls="schedule-day-2" id="tab-schedule-2" data-tab-group="schedule" data-tab="2">День 2 · 15 ноября</button>
+          <button class="tour__tab" role="tab" aria-selected="false" aria-controls="schedule-day-3" id="tab-schedule-3" data-tab-group="schedule" data-tab="3">День 3 · 16 ноября</button>
+        </div>
+
+        <div class="tour__panels">
+          <div class="tour__panel is-active" role="tabpanel" id="schedule-day-1" aria-labelledby="tab-schedule-1" data-panel-group="schedule" data-panel="1">
+            <p class="tour__day-note">Открытие турнира · индивидуальные упражнения · младшие группы</p>
+            <div class="tour__table-wrap">
+              <table class="tour__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Время</th>
+                    <th scope="col">Событие</th>
+                    <th scope="col">Категория</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:00</td>
+                    <td>Регистрация участниц</td>
+                    <td>Все группы</td>
+                  </tr>
+                  <tr>
+                    <td>10:00</td>
+                    <td>Торжественное открытие</td>
+                    <td>Церемония</td>
+                  </tr>
+                  <tr>
+                    <td>10:30</td>
+                    <td>Без предмета</td>
+                    <td>Младшая группа A</td>
+                  </tr>
+                  <tr>
+                    <td>12:00</td>
+                    <td>Обруч</td>
+                    <td>Младшая группа A</td>
+                  </tr>
+                  <tr>
+                    <td>14:00</td>
+                    <td>Мяч</td>
+                    <td>Младшая группа B</td>
+                  </tr>
+                  <tr>
+                    <td>16:00</td>
+                    <td>Лента</td>
+                    <td>Младшая группа B</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tour__panel" role="tabpanel" id="schedule-day-2" aria-labelledby="tab-schedule-2" hidden data-panel-group="schedule" data-panel="2">
+            <p class="tour__day-note">Средние и старшие группы · упражнения с предметами</p>
+            <div class="tour__table-wrap">
+              <table class="tour__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Время</th>
+                    <th scope="col">Событие</th>
+                    <th scope="col">Категория</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>09:30</td>
+                    <td>Скакалка</td>
+                    <td>Средняя группа</td>
+                  </tr>
+                  <tr>
+                    <td>11:00</td>
+                    <td>Без предмета</td>
+                    <td>Средняя группа</td>
+                  </tr>
+                  <tr>
+                    <td>13:00</td>
+                    <td>Обруч</td>
+                    <td>Старшая группа</td>
+                  </tr>
+                  <tr>
+                    <td>15:00</td>
+                    <td>Мяч</td>
+                    <td>Старшая группа</td>
+                  </tr>
+                  <tr>
+                    <td>17:00</td>
+                    <td>Лента</td>
+                    <td>Старшая группа</td>
+                  </tr>
+                  <tr>
+                    <td>19:00</td>
+                    <td>Мастер-класс SOLO</td>
+                    <td>Открытое мероприятие</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tour__panel" role="tabpanel" id="schedule-day-3" aria-labelledby="tab-schedule-3" hidden data-panel-group="schedule" data-panel="3">
+            <p class="tour__day-note">Финалы · награждение · розыгрыш призов</p>
+            <div class="tour__table-wrap">
+              <table class="tour__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Время</th>
+                    <th scope="col">Событие</th>
+                    <th scope="col">Категория</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10:00</td>
+                    <td>Командное многоборье</td>
+                    <td>Команды клубов</td>
+                  </tr>
+                  <tr>
+                    <td>12:30</td>
+                    <td>Финалы · без предмета</td>
+                    <td>Юниоры и взрослые</td>
+                  </tr>
+                  <tr>
+                    <td>15:00</td>
+                    <td>Финалы · с предметами</td>
+                    <td>Юниоры и взрослые</td>
+                  </tr>
+                  <tr>
+                    <td>17:30</td>
+                    <td>Церемония награждения</td>
+                    <td>Все категории</td>
+                  </tr>
+                  <tr>
+                    <td>18:30</td>
+                    <td>Розыгрыш призов SOLO</td>
+                    <td>Зрители и участницы</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour__section reveal" id="results">
+      <div class="tour__wrap">
+        <header class="tour__head">
+          <p class="tour__eyebrow">Итоги</p>
+          <h2 class="tour__h2">Результаты</h2>
+          <p class="tour__p">Медалисты по дням соревнований. Полные протоколы доступны у секретариата.</p>
+        </header>
+
+        <div class="tour__tabs" role="tablist" aria-label="Результаты по дням">
+          <button class="tour__tab is-active" role="tab" aria-selected="true" aria-controls="results-day-1" id="tab-results-1" data-tab-group="results" data-tab="1">День 1</button>
+          <button class="tour__tab" role="tab" aria-selected="false" aria-controls="results-day-2" id="tab-results-2" data-tab-group="results" data-tab="2">День 2</button>
+          <button class="tour__tab" role="tab" aria-selected="false" aria-controls="results-day-3" id="tab-results-3" data-tab-group="results" data-tab="3">День 3</button>
+        </div>
+
+        <div class="tour__panels">
+          <div class="tour__panel is-active" role="tabpanel" id="results-day-1" aria-labelledby="tab-results-1" data-panel-group="results" data-panel="1">
+            <div class="tour__results-grid">
+              <article class="tour__result-card">
+                <h3>Младшая группа A · без предмета</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Анна Смирнова · 19.450</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Елена Кузнецова · 19.200</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Мария Петрова · 18.975</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Младшая группа A · обруч</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Мария Петрова · 19.100</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Анна Смирнова · 18.850</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> София Белова · 18.600</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Младшая группа B · мяч</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Дарья Волкова · 19.300</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Полина Орлова · 19.050</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Алина Морозова · 18.800</li>
+                </ol>
+              </article>
+            </div>
+          </div>
+
+          <div class="tour__panel" role="tabpanel" id="results-day-2" aria-labelledby="tab-results-2" hidden data-panel-group="results" data-panel="2">
+            <div class="tour__results-grid">
+              <article class="tour__result-card">
+                <h3>Средняя группа · скакалка</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Виктория Лебедева · 20.100</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Ксения Новикова · 19.850</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Анастасия Соколова · 19.600</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Старшая группа · обруч</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Екатерина Романова · 20.450</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Ольга Фёдорова · 20.200</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Ирина Захарова · 19.950</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Старшая группа · лента</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Ольга Фёдорова · 20.350</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Екатерина Романова · 20.100</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Наталья Громова · 19.875</li>
+                </ol>
+              </article>
+            </div>
+          </div>
+
+          <div class="tour__panel" role="tabpanel" id="results-day-3" aria-labelledby="tab-results-3" hidden data-panel-group="results" data-panel="3">
+            <div class="tour__results-grid">
+              <article class="tour__result-card tour__result-card--wide">
+                <h3>Командное многоборье</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Клуб «Грация» · 118.450</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> СДЮШОР «Олимп» · 117.200</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Школа «Арт-Спорт» · 116.800</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Финал · без предмета (юниоры)</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Екатерина Романова · 21.050</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Виктория Лебедева · 20.800</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Ольга Фёдорова · 20.550</li>
+                </ol>
+              </article>
+              <article class="tour__result-card">
+                <h3>Финал · многоборье (взрослые)</h3>
+                <ol class="tour__podium">
+                  <li><span class="tour__medal tour__medal--gold">1</span> Алиса Миронова · 41.200</li>
+                  <li><span class="tour__medal tour__medal--silver">2</span> Юлия Семёнова · 40.850</li>
+                  <li><span class="tour__medal tour__medal--bronze">3</span> Татьяна Егорова · 40.500</li>
+                </ol>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour__section tour__section--soft reveal" id="gallery">
+      <div class="tour__wrap">
+        <header class="tour__head">
+          <p class="tour__eyebrow">Фото</p>
+          <h2 class="tour__h2">Галерея</h2>
+          <p class="tour__p">Лучшие моменты турнира — выступления, награждение и атмосфера SOLO Cup.</p>
+        </header>
+
+        <div class="tour__gallery" id="galleryGrid">
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Maria1.png" data-caption="Выступление с лентой">
+            <img src="../sotrudnichestvo/images/Maria1.png" alt="Выступление с лентой" loading="lazy">
+          </button>
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Maria2.png" data-caption="Упражнение с мячом">
+            <img src="../sotrudnichestvo/images/Maria2.png" alt="Упражнение с мячом" loading="lazy">
+          </button>
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Maria3.png" data-caption="Позирование на ковре">
+            <img src="../sotrudnichestvo/images/Maria3.png" alt="Позирование на ковре" loading="lazy">
+          </button>
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Maria4.png" data-caption="Финальное выступление">
+            <img src="../sotrudnichestvo/images/Maria4.png" alt="Финальное выступление" loading="lazy">
+          </button>
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Girl and Ball1.png" data-caption="Мастер-класс SOLO">
+            <img src="../sotrudnichestvo/images/Girl and Ball1.png" alt="Мастер-класс SOLO" loading="lazy">
+          </button>
+          <button class="tour__gallery-item" type="button" data-full="../sotrudnichestvo/images/Ball1.png" data-caption="Предметы SOLO">
+            <img src="../sotrudnichestvo/images/Ball1.png" alt="Предметы SOLO" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour__section reveal" id="raffle">
+      <div class="tour__wrap">
+        <header class="tour__head">
+          <p class="tour__eyebrow">Призы</p>
+          <h2 class="tour__h2">Розыгрыш на турнире</h2>
+          <p class="tour__p">SOLO разыграл подарки среди зрителей и участниц турнира.</p>
+        </header>
+
+        <div class="tour__raffle-grid">
+          <article class="tour__card">
+            <h3>Условия участия</h3>
+            <ul class="tour__list">
+              <li>Быть зарегистрированным участником или зрителем турнира SOLO Cup.</li>
+              <li>Подписаться на официальные аккаунты SOLO во ВКонтакте или Telegram.</li>
+              <li>Заполнить карточку участника розыгрыша у стенда SOLO в фойе (день 1–2) или перед церемонией (день 3).</li>
+              <li>Находиться в зале во время розыгрыша — <strong>16 ноября, 18:30</strong>.</li>
+            </ul>
+            <p class="tour__note">Один человек — одна карточка. Возраст участников розыгрыша — от 6 лет.</p>
+          </article>
+
+          <article class="tour__card tour__card--prize">
+            <h3>Призовой фонд</h3>
+            <ul class="tour__prizes">
+              <li>
+                <span class="tour__prize-icon" aria-hidden="true">🎁</span>
+                <div>
+                  <strong>Главный приз</strong>
+                  <p>Комплект предметов SOLO (мяч, лента, обруч) + сертификат 10 000 ₽</p>
+                </div>
+              </li>
+              <li>
+                <span class="tour__prize-icon" aria-hidden="true">✨</span>
+                <div>
+                  <strong>5 призов</strong>
+                  <p>Мячи SOLO и аксессуары для гимнасток</p>
+                </div>
+              </li>
+              <li>
+                <span class="tour__prize-icon" aria-hidden="true">🎟</span>
+                <div>
+                  <strong>10 призов</strong>
+                  <p>Промокоды −20% на покупку в solorussia.com</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="tour__card tour__card--winner">
+            <p class="tour__winner-label">Победитель розыгрыша</p>
+            <h3 class="tour__winner-name">Алина Морозова</h3>
+            <p class="tour__winner-meta">Участница · младшая группа B · карточка № 047</p>
+            <p class="tour__winner-prize">Главный приз — комплект предметов SOLO и сертификат 10 000 ₽</p>
+            <p class="tour__note">Розыгрыш состоялся 16 ноября 2025 в 18:30. Поздравляем победительницу!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="tour__footer">
+    <div class="tour__wrap">
+      <a href="../"><img src="https://solorussia.com/dist/img/logo.svg" alt="SOLO" width="100" height="32"></a>
+      <p><a href="https://solorussia.com/" target="_blank" rel="noopener">solorussia.com</a> · <a href="../sotrudnichestvo/">Сотрудничество</a></p>
+    </div>
+  </footer>
+
+  <div class="tour__lightbox" id="lightbox" hidden>
+    <button class="tour__lightbox-close" type="button" aria-label="Закрыть">&times;</button>
+    <button class="tour__lightbox-prev" type="button" aria-label="Предыдущее фото">&#8592;</button>
+    <figure class="tour__lightbox-inner">
+      <img src="" alt="" id="lightboxImg">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="tour__lightbox-next" type="button" aria-label="Следующее фото">&#8594;</button>
+  </div>
+
+  <script src="../reveal.js"></script>
+  <script src="tournament.js"></script>
+</body>
+</html>
