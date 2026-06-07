@@ -221,20 +221,6 @@ button {
   font-size: clamp(0.92rem, 2.6vw + 0.35rem, 2.85rem);
   white-space: nowrap;
   max-width: 100%;
-  background: linear-gradient(
-    105deg,
-    #9a7424 0%,
-    #c9a227 18%,
-    #f5e6a8 38%,
-    #d4af37 52%,
-    #f8e7a8 68%,
-    #b8860b 82%,
-    #8f6b1f 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .tour__h2 {
@@ -769,13 +755,57 @@ button {
 
 .tour__prizes li {
   display: flex;
-  gap: 0.85rem;
+  gap: 1rem;
   align-items: flex-start;
 }
 
-.tour__prize-icon {
-  font-size: 1.5rem;
-  line-height: 1;
+.tour__prize-ico {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 243, 241, 0.72) 100%);
+  box-shadow:
+    0 14px 32px rgba(254, 81, 73, 0.16),
+    0 4px 10px rgba(254, 81, 73, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -10px 22px rgba(254, 81, 73, 0.05);
+  position: relative;
+  animation: tour-prize-float 4.5s ease-in-out infinite;
+}
+
+.tour__prize-ico::after {
+  content: "";
+  position: absolute;
+  inset: 6px 8px auto;
+  height: 38%;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), transparent);
+  pointer-events: none;
+}
+
+.tour__prize-ico svg {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 8px 14px rgba(254, 81, 73, 0.28));
+}
+
+.tour__prize-ico--sparkle {
+  animation-delay: -2.2s;
+}
+
+@keyframes tour-prize-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .tour__prizes strong {
@@ -1167,5 +1197,9 @@ button {
   .tour__stream-play,
   .tour__protocol-page {
     transition: none;
+  }
+
+  .tour__prize-ico {
+    animation: none;
   }
 }
