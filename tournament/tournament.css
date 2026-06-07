@@ -217,6 +217,12 @@ button {
   text-transform: uppercase;
 }
 
+.tour__section--hero .tour__h1 {
+  font-size: clamp(0.92rem, 2.6vw + 0.35rem, 2.85rem);
+  white-space: nowrap;
+  max-width: 100%;
+}
+
 .tour__h2 {
   margin: 0 0 1rem;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
@@ -624,36 +630,6 @@ button {
   opacity: 0.9;
 }
 
-.tour__protocol {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.tour__protocol-cover {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  margin-inline: auto;
-  padding: 0;
-  border: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  background: #fff;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s;
-}
-
-.tour__protocol-cover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 24px 64px rgba(254, 81, 73, 0.15);
-}
-
-.tour__protocol-cover img {
-  width: 100%;
-  height: auto;
-}
-
 .tour__protocol-pages {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -1025,7 +1001,6 @@ button {
   .tour__stream,
   .tour__stream img,
   .tour__stream-play,
-  .tour__protocol-cover,
   .tour__protocol-page {
     transition: none;
   }

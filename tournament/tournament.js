@@ -46,18 +46,38 @@ document.querySelectorAll(".tour__tab").forEach((tab) => {
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const lightboxCaption = document.getElementById("lightboxCaption");
-const lightboxItems = Array.from(document.querySelectorAll(".tour__lightbox-trigger"));
+const lightboxTriggers = Array.from(document.querySelectorAll(".tour__lightbox-trigger"));
+let activeLightboxItems = lightboxTriggers;
 let currentIndex = 0;
 
-function openLightbox(index) {
-  if (!lightbox || !lightboxItems.length) return;
-  currentIndex = index;
-  const item = lightboxItems[currentIndex];
+function getLightboxGroup(trigger) {
+  const panel = trigger.closest('[role="tabpanel"]');
+  if (panel) {
+    return Array.from(panel.querySelectorAll(".tour__lightbox-trigger"));
+  }
+
+  const gallery = trigger.closest("#galleryGrid");
+  if (gallery) {
+    return Array.from(gallery.querySelectorAll(".tour__lightbox-trigger"));
+  }
+
+  return lightboxTriggers;
+}
+
+function showLightboxItem(item) {
+  if (!lightbox || !item) return;
   lightboxImg.src = item.dataset.full;
   lightboxImg.alt = item.querySelector("img")?.alt || item.dataset.caption || "";
   lightboxCaption.textContent = item.dataset.caption || "";
   lightbox.hidden = false;
   document.body.style.overflow = "hidden";
+}
+
+function openLightbox(item) {
+  activeLightboxItems = getLightboxGroup(item);
+  currentIndex = activeLightboxItems.indexOf(item);
+  if (currentIndex === -1) return;
+  showLightboxItem(item);
 }
 
 function closeLightbox() {
@@ -68,13 +88,13 @@ function closeLightbox() {
 }
 
 function showAdjacent(step) {
-  if (!lightboxItems.length) return;
-  currentIndex = (currentIndex + step + lightboxItems.length) % lightboxItems.length;
-  openLightbox(currentIndex);
+  if (!activeLightboxItems.length) return;
+  currentIndex = (currentIndex + step + activeLightboxItems.length) % activeLightboxItems.length;
+  showLightboxItem(activeLightboxItems[currentIndex]);
 }
 
-lightboxItems.forEach((item, index) => {
-  item.addEventListener("click", () => openLightbox(index));
+lightboxTriggers.forEach((item) => {
+  item.addEventListener("click", () => openLightbox(item));
 });
 
 lightbox?.querySelector(".tour__lightbox-close")?.addEventListener("click", closeLightbox);
